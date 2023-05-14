@@ -32,7 +32,7 @@ public class ComandoPrendi implements Comando{
 					}
 				
 				//aggiungo l'attrezzo in borsa
-				partita.getGiocatore().borsa.addAttrezzo(attrezzo);
+				partita.getGiocatore().getBorsa().addAttrezzo(attrezzo);
 				
 			}else {
 				this.io.mostraMessaggio("L'oggetto che cerchi non è presente nella stanza");

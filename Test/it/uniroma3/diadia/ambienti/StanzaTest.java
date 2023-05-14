@@ -48,4 +48,5 @@ class StanzaTest {
 	public void attrezzoAggiuntoNellaStanza() {
 		assertTrue(this.camera.addAttrezzo(this.martello));
 	}
+	
 }

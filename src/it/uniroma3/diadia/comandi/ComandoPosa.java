@@ -19,12 +19,12 @@ public class ComandoPosa implements Comando{
 		
 		if(this.nomeAttrezzo==null) {
 			this.io.mostraMessaggio("Cosa vuoi posare?");
-		}else if(partita.getGiocatore().borsa.hasAttrezzo(this.nomeAttrezzo) && this.nomeAttrezzo!=null) {
+		}else if(partita.getGiocatore().getBorsa().hasAttrezzo(this.nomeAttrezzo) && this.nomeAttrezzo!=null) {
 				Attrezzo attrezzo = null;
-				attrezzo = partita.getGiocatore().borsa.getAttrezzo(this.nomeAttrezzo);
+				attrezzo = partita.getGiocatore().getBorsa().getAttrezzo(this.nomeAttrezzo);
 				
 				//tolgo l'attrezzo dalla borsa
-				partita.getGiocatore().borsa.removeAttrezzo(this.nomeAttrezzo); 
+				partita.getGiocatore().getBorsa().removeAttrezzo(this.nomeAttrezzo); 
 				
 				//aggiungo l'attrezzo alla stanza
 				partita.getStanzaCorrente().addAttrezzo(attrezzo);

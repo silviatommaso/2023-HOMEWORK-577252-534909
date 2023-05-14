@@ -6,6 +6,8 @@ public class Labirinto {
 	
 	private Stanza stanzaIngresso;
 	private Stanza stanzaUscita;
+	private Stanza stanzaIniziale;
+	private Stanza stanzaVincente;
 	
 	public Labirinto() {
 		creaStanze();
@@ -64,11 +66,26 @@ public class Labirinto {
         stanzaIngresso = atrio;  
 		stanzaUscita = biblioteca;
     }
+    
+    public Stanza addStanzaIniziale(Stanza stanzaIniziale) {
+		this.stanzaIniziale = stanzaIniziale;
+		return this.stanzaIniziale;
+	}
+	
+	public Stanza addStanzaVincente(Stanza stanzaVincente) {
+		this.stanzaVincente = stanzaVincente;
+		return this.stanzaVincente;
+	}
 
 	public Stanza getStanzaVincente() {
 		return stanzaUscita;
 	}
 	public Stanza getStanzaCorrente() {
 		return stanzaIngresso;
+	}
+
+	public Stanza getStanzaIniziale() {
+		// TODO Auto-generated method stub
+		return this.stanzaIniziale;
 	}
 }

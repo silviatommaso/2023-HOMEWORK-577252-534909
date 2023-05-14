@@ -12,7 +12,7 @@ public class ComandoGuarda implements Comando{
 
 	@Override
 	public void esegui(Partita partita) {
-		this.io.mostraMessaggio(partita.getStanzaCorrente().getDescrizione());
+		this.io.mostraMessaggio(partita.getStanzaCorrente().getDescrizione() + partita.getGiocatore().getBorsa().toString());
 		this.io.mostraMessaggio("\nHai ancora a disposizione:");
 		System.out.print(partita.getGiocatore().getCfu());
 		this.io.mostraMessaggio(" tentativi");

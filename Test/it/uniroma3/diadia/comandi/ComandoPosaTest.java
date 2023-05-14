@@ -20,14 +20,14 @@ class ComandoPosaTest {
 		this.attrezzo = new Attrezzo("Martello", 3);
 		this.comando = new ComandoPosa();
 		
-		this.partita.getGiocatore().borsa.addAttrezzo(this.attrezzo);
+		this.partita.getGiocatore().getBorsa().addAttrezzo(this.attrezzo);
 		this.comando.setParametro(this.attrezzo.getNome());
 		this.comando.esegui(this.partita);	
 	}
 	
 	@Test
 	void oggettoCorrettamenteRimossoDallaBorsaTest() {	
-		assertFalse(this.partita.getGiocatore().borsa.hasAttrezzo(this.attrezzo.getNome()));
+		assertFalse(this.partita.getGiocatore().getBorsa().hasAttrezzo(this.attrezzo.getNome()));
 	}
 	
 	@Test

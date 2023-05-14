@@ -29,8 +29,12 @@ public class Partita{
 		this.stanzaVincente=labirinto.getStanzaVincente();
 	}
 	
+	public Partita(Labirinto labirinto) {
+		this.labirinto = labirinto;
+	}
+	
 	//********************************************************************************************************************************************************************************************************
-
+ 
    	public Stanza getStanzaVincente() {
 		return stanzaVincente;
 	}
@@ -92,6 +96,12 @@ public class Partita{
 		}else{
 			return false;
 		}   
+	}
+	
+	//********************************************************************************************************************************************************************************************************
+	
+	public void setLabirinto(Labirinto labirinto) {
+		this.labirinto = labirinto;
 	}
 }
 
